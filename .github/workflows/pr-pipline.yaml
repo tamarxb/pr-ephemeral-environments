@@ -32,7 +32,7 @@ jobs:
 
       # Verify image loaded
       - name: Verify image in kind
-        run: docker exec -it kind-control-plane crictl images | grep my-fastapi || echo "Image not found!"  # checking if the load image worked
+        run: docker exec kind-control-plane crictl images | grep my-fastapi || echo "Image not found!"  # checking if the load image worked
 
       # Deploy to K8s
       - name: Deploy app
