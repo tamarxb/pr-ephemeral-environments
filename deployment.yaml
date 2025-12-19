@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: pr-demo
-        image: localhost:5000/pr-demo:latest
+        image: my-fastapi:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 8000
 
