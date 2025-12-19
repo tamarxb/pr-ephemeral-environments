@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pr-demo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pr-demo
+  template:
+    metadata:
+      labels:
+        app: pr-demo
+    spec:
+      containers:
+      - name: pr-demo
+        image: localhost:5000/pr-demo:latest
+        ports:
+        - containerPort: 8000
+
